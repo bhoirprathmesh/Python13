@@ -1,0 +1,38 @@
+<h1>Hey, Good Morning!</h1>
+<hr>
+<table border="1">
+    <tr>
+        <td>S_no</td>
+        <td>Name</td>
+        <td>Course</td>
+        <td>Age</td>
+        <td>Nationality</td>
+    </tr>
+    {% for person in data %}
+    <tr>
+        <td>{{ person.S_no }}</td>
+        <td>{{ person.Name }}</td>
+        <td>{{ person.Course }}</td>
+        <td>{{ person.Age }}</td>
+        <td>{{ person.Nationality }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<h1>Input your text below: </h1>
+<form action="counter" method="post">
+    {% csrf_token %}
+    <textarea name="text" row="25" cols="100"></textarea>
+    <input type="Submit">
+</form>
+<h1>The Amount of words : {{amount}}</h1>
+<br>
+<form action="largest" method="">
+    {% csrf_token %}
+    <h1>Enter the three Numbers:</h1>
+    <h3>Enter 1st Number: <input type="number" name="number1"></h3>
+    <h3>Enter 2nd Number: <input type="number" name="number2"></h3>
+    <h3>Enter 3rd Number: <input type="number" name="number3"></h3>
+    <input type="submit" value="Submit">
+</form>
+
